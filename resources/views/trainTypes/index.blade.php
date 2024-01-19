@@ -9,6 +9,7 @@
 <body>
     <h1>Todos los tipos de trenes</h1>
     <a href="{{route('trainTypes.create')}}">Crear tipo de Tren</a>
+    <br>
     <a href="{{ route('trains.index') }}">Trenes</a>
     <a href="{{ route('trainTypes.index') }}">Tipos de trenes</a>
     <a href="{{ route('tickets.index') }}">Tickets</a>
