@@ -40,7 +40,7 @@ class TrainTypeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('trainTypes/show', ['trainType' => TrainType::find($id)]);
     }
 
     /**

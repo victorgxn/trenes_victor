@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Todos los tipos de tickets</h1>
+    <a href="{{route('ticketTypes.create')}}">Crear tipo de Tren</a>
     <table>
         <thead>
             <tr>
@@ -18,6 +19,11 @@
             @foreach ($ticketTypes as $type)
                 <tr>
                     <td>{{ $type->type }}</td>
+                    <td>
+                        <form action="{{ route('ticketTypes.show', ['ticketType' => $type->id]) }}">
+                            <input type="submit" value="Ver">
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

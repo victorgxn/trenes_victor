@@ -19,6 +19,11 @@
             @foreach ($trainTypes as $type)
                 <tr>
                     <td>{{ $type->type }}</td>
+                    <td>
+                        <form action="{{ route('trainTypes.show', ['trainType' => $type->id]) }}">
+                            <input type="submit" value="Ver">
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

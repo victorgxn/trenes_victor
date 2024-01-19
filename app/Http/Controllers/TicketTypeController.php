@@ -21,7 +21,7 @@ class TicketTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view('ticketTypes/create', ['ticketTypes' => TicketType::all()]);
     }
 
     /**
@@ -29,7 +29,11 @@ class TicketTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $TicketType = new TicketType;
+        $TicketType->type = $request->input('type');
+        $TicketType->save();
+        
+        return redirect('ticketTypes');
     }
 
     /**
@@ -37,7 +41,7 @@ class TicketTypeController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('ticketTypes/show', ['ticketTypes' => TicketType::find($id)]);
     }
 
     /**
