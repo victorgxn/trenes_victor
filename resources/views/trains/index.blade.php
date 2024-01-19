@@ -7,6 +7,7 @@
     <title>Index - Trenes</title>
 </head>
 <body>
+    <h1>Trenes</h1>
     <a href="{{route('trains.create')}}">Crear tren</a>
     <br>
     <a href="{{ route('trains.index') }}">Trenes</a>
