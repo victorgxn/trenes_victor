@@ -49,7 +49,7 @@ class TicketTypeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('ticketTypes/edit', ['ticketType' => ticketType::find($id), 'ticketTypes' => TicketType::all()]);
     }
 
     /**
@@ -57,7 +57,10 @@ class TicketTypeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $TicketType = TicketType::find($id);
+        $TicketType->type = $request->input('type');
+        $TicketType->save();
+        return redirect('ticketTypes');
     }
 
     /**
