@@ -11,6 +11,11 @@
 <body>
     <h1>Todos los tickets</h1>
     <a href="{{ route('tickets.create') }}">Crear ticket</a>
+    <a href="{{route('ticketTypes.create')}}">Crear tipo de tickets</a>
+    <a href="{{ route('trains.index') }}">Trenes</a>
+    <a href="{{ route('trainTypes.index') }}">Tipos de trenes</a>
+    <a href="{{ route('tickets.index') }}">Tickets</a>
+    <a href="{{ route('ticketTypes.index') }}">Tipos de tickets</a><br>
     <table>
         <thead>
             <tr>
