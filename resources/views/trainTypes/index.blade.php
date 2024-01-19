@@ -24,6 +24,10 @@
                             <input type="submit" value="Ver">
                         </form>
                     </td>
+                    <td><form action="{{ route('trainTypes.edit', ['trainType' => $type->id]) }}">
+                        <input type="submit" value="Editar">
+                    </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

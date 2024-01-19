@@ -48,7 +48,7 @@ class TrainTypeController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('trainTypes/edit', ['trainType' => trainType::find($id), 'trainTypes' => trainType::all()]);
     }
 
     /**
@@ -56,7 +56,10 @@ class TrainTypeController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $trainType = trainType::find($id);
+        $trainType->type = $request->input('type');
+        $trainType->save();
+        return redirect('trainTypes');
     }
 
     /**
